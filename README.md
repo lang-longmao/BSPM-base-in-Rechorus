@@ -7,6 +7,8 @@
 
 本仓库贡献：成功在`Rechorus`框架中实现了`BSPM`算法
 
+主要贡献体现在`src\models\geneal\BSPM.py`中
+
 #本地部署：
 
 ```bash
