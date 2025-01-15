@@ -1,0 +1,24 @@
+INFO:root:Namespace(model_name='BSPM', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-13 00:01:38 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments          | Values     
+=================================
+ batch_size         | 256       
+ data_appendix      |           
+ dataset            | gowalla   
+ early_stop         | 10        
+ epoch              | 200       
+ eval_batch_size    | 256       
+ gpu                | 0         
+ l2                 | 0         
+ lr                 | 0.001     
+ main_metric        |           
+ num_workers        | 5         
+ optimizer          | Adam      
+ random_seed        | 0         
+ save_final_results | 1         
+ topk               | 5,10,20,50
+=================================
+INFO:root:Device: cuda
+INFO:root:Reading data from "data/", dataset = "gowalla" 

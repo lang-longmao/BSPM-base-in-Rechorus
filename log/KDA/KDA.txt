@@ -1,0 +1,112 @@
+INFO:root:Namespace(model_name='KDA', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-14 14:42:59 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ attention_size     | 10                  
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 200                 
+ eval_batch_size    | 256                 
+ freq_rand          | 0                   
+ gamma              | -1                  
+ gpu                | 0                   
+ history_max        | 20                  
+ include_attr       | 1                   
+ include_val        | 1                   
+ l2                 | 1e-06               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_dft              | 64                  
+ neg_head_p         | 0.5                 
+ num_heads          | 4                   
+ num_layers         | 1                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ pooling            | average             
+ random_seed        | 0                   
+ save_final_results | 1                   
+ t_scalar           | 60                  
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cuda
+INFO:root:Reading data from "data/", dataset = "Grocery_and_Gourmet_Food" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14681, "# item": 8713, "# entry": 151254
+INFO:root:Appending history info...
+INFO:root:Constructing relation triplets...
+INFO:root:Item-item relations:['r_complement', 'r_substitute']
+INFO:root:Attribute-based relations:['i_category']
+INFO:root:"# relation": 4, "# triplet": 373741
+INFO:root:Save corpus to data/Grocery_and_Gourmet_Food\KDAReader.pkl
+INFO:root:#params: 1530962
+INFO:root:KDA(
+  (user_embeddings): Embedding(14682, 64)
+  (entity_embeddings): Embedding(8771, 64)
+  (relation_embeddings): Embedding(4, 64)
+  (relational_dynamic_aggregation): RelationalDynamicAggregation(
+    (relation_embeddings): Embedding(4, 64)
+    (freq_real): Embedding(4, 33)
+    (freq_imag): Embedding(4, 33)
+  )
+  (attn_head): MultiHeadAttention(
+    (q_linear): Linear(in_features=64, out_features=64, bias=False)
+    (k_linear): Linear(in_features=64, out_features=64, bias=False)
+    (v_linear): Linear(in_features=64, out_features=64, bias=False)
+  )
+  (W1): Linear(in_features=64, out_features=64, bias=True)
+  (W2): Linear(in_features=64, out_features=64, bias=True)
+  (dropout_layer): Dropout(p=0, inplace=False)
+  (layer_norm): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+  (item_bias): Embedding(8714, 1)
+)
+INFO:root:Test Before Training: (HR@5:0.0000,NDCG@5:0.0000,HR@10:0.0000,NDCG@10:0.0000,HR@20:0.0000,NDCG@20:0.0000,HR@50:0.0000,NDCG@50:0.0000)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=2.3860 [22.6 s]	dev=(HR@5:0.2424,NDCG@5:0.1585) [21.1 s] *
+INFO:root:Epoch 2     loss=2.3492 [21.4 s]	dev=(HR@5:0.2430,NDCG@5:0.1584) [20.8 s]
+INFO:root:Epoch 3     loss=2.3180 [21.3 s]	dev=(HR@5:0.2455,NDCG@5:0.1590) [20.8 s] *
+INFO:root:Epoch 4     loss=2.2918 [21.4 s]	dev=(HR@5:0.2454,NDCG@5:0.1594) [20.8 s] *
+INFO:root:Epoch 5     loss=2.2704 [21.4 s]	dev=(HR@5:0.2462,NDCG@5:0.1596) [23.4 s] *
+INFO:root:Epoch 6     loss=2.2517 [28.0 s]	dev=(HR@5:0.2468,NDCG@5:0.1598) [24.6 s] *
+INFO:root:Epoch 7     loss=2.2368 [28.2 s]	dev=(HR@5:0.2452,NDCG@5:0.1596) [21.3 s]
+INFO:root:Epoch 8     loss=2.2241 [25.0 s]	dev=(HR@5:0.2454,NDCG@5:0.1596) [25.0 s]
+INFO:root:Epoch 9     loss=2.2124 [27.2 s]	dev=(HR@5:0.2462,NDCG@5:0.1599) [24.5 s] *
+INFO:root:Epoch 10    loss=2.2046 [28.6 s]	dev=(HR@5:0.2460,NDCG@5:0.1599) [25.9 s]
+INFO:root:Epoch 11    loss=2.1959 [28.9 s]	dev=(HR@5:0.2455,NDCG@5:0.1598) [25.6 s]
+INFO:root:Epoch 12    loss=2.1888 [30.4 s]	dev=(HR@5:0.2458,NDCG@5:0.1603) [24.7 s] *
+INFO:root:Epoch 13    loss=2.1833 [29.1 s]	dev=(HR@5:0.2457,NDCG@5:0.1603) [22.7 s]
+INFO:root:Epoch 14    loss=2.1784 [22.1 s]	dev=(HR@5:0.2456,NDCG@5:0.1603) [20.7 s]
+INFO:root:Epoch 15    loss=2.1733 [27.2 s]	dev=(HR@5:0.2458,NDCG@5:0.1603) [25.2 s]
+INFO:root:Epoch 16    loss=2.1707 [28.0 s]	dev=(HR@5:0.2455,NDCG@5:0.1604) [26.1 s] *
+INFO:root:Epoch 17    loss=2.1667 [28.2 s]	dev=(HR@5:0.2458,NDCG@5:0.1606) [24.3 s] *
+INFO:root:Epoch 18    loss=2.1626 [27.4 s]	dev=(HR@5:0.2457,NDCG@5:0.1606) [24.9 s] *
+INFO:root:Epoch 19    loss=2.1625 [28.6 s]	dev=(HR@5:0.2460,NDCG@5:0.1605) [25.4 s]
+INFO:root:Epoch 20    loss=2.1589 [29.4 s]	dev=(HR@5:0.2465,NDCG@5:0.1605) [25.3 s]
+INFO:root:Epoch 21    loss=2.1563 [27.4 s]	dev=(HR@5:0.2454,NDCG@5:0.1600) [25.3 s]
+INFO:root:Epoch 22    loss=2.1564 [28.8 s]	dev=(HR@5:0.2465,NDCG@5:0.1605) [24.9 s]
+INFO:root:Epoch 23    loss=2.1532 [28.3 s]	dev=(HR@5:0.2459,NDCG@5:0.1600) [25.5 s]
+INFO:root:Epoch 24    loss=2.1527 [29.6 s]	dev=(HR@5:0.2456,NDCG@5:0.1599) [24.3 s]
+INFO:root:Epoch 25    loss=2.1509 [28.9 s]	dev=(HR@5:0.2449,NDCG@5:0.1594) [24.7 s]
+INFO:root:Epoch 26    loss=2.1511 [29.1 s]	dev=(HR@5:0.2454,NDCG@5:0.1593) [25.2 s]
+INFO:root:Epoch 27    loss=2.1477 [28.0 s]	dev=(HR@5:0.2449,NDCG@5:0.1591) [25.9 s]
+INFO:root:Early stop at 27 based on dev result.
+INFO:root:
+Best Iter(dev)=   18	 dev=(HR@5:0.2457,NDCG@5:0.1606) [1373.9 s] 
+INFO:root:Load model from ../model/KDA/KDA.pt
+INFO:root:
+Dev  After Training: (HR@5:0.2457,NDCG@5:0.1606,HR@10:0.3958,NDCG@10:0.2089,HR@20:0.5488,NDCG@20:0.2477,HR@50:0.7486,NDCG@50:0.2874)
+INFO:root:
+Test After Training: (HR@5:0.2088,NDCG@5:0.1321,HR@10:0.3441,NDCG@10:0.1756,HR@20:0.4961,NDCG@20:0.2142,HR@50:0.6965,NDCG@50:0.2540)
+INFO:root:Saving top-100 recommendation results to: ../log/KDA\KDA\rec-KDA-dev.csv
+INFO:root:dev Prediction results saved!
+INFO:root:Saving top-100 recommendation results to: ../log/KDA\KDA\rec-KDA-test.csv
+INFO:root:test Prediction results saved!
+INFO:root:
+--------------------------------------------- END: 2024-12-14 15:08:14 ---------------------------------------------

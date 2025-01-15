@@ -1,5 +1,5 @@
 INFO:root:Namespace(model_name='BPRMF', model_mode='')
-INFO:root:--------------------------------------------- BEGIN: 2024-12-12 23:08:33 ---------------------------------------------
+INFO:root:--------------------------------------------- BEGIN: 2024-12-12 23:10:40 ---------------------------------------------
 INFO:root:
 ===========================================
  Arguments          | Values               
@@ -26,3 +26,38 @@ INFO:root:
 ===========================================
 INFO:root:Device: cuda
 INFO:root:Reading data from "data/", dataset = "Grocery_and_Gourmet_Food" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14681, "# item": 8713, "# entry": 151254
+INFO:root:Save corpus to data/Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:BPRMF(
+  (u_embeddings): Embedding(14682, 64)
+  (i_embeddings): Embedding(8714, 64)
+)
+INFO:root:Test Before Training: (HR@5:0.0000,NDCG@5:0.0000,HR@10:0.0000,NDCG@10:0.0000,HR@20:0.0000,NDCG@20:0.0000,HR@50:0.0000,NDCG@50:0.0000)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6931 [17.3 s]	dev=(HR@5:0.0000,NDCG@5:0.0000) [15.0 s] *
+INFO:root:Epoch 2     loss=0.6931 [16.1 s]	dev=(HR@5:0.0000,NDCG@5:0.0000) [15.3 s] *
+INFO:root:Epoch 3     loss=0.6931 [16.7 s]	dev=(HR@5:0.0000,NDCG@5:0.0000) [15.0 s] *
+INFO:root:Epoch 4     loss=0.6931 [18.2 s]	dev=(HR@5:0.0000,NDCG@5:0.0000) [16.9 s] *
+INFO:root:Epoch 5     loss=0.6931 [18.2 s]	dev=(HR@5:0.0000,NDCG@5:0.0000) [16.4 s] *
+INFO:root:Epoch 6     loss=0.6931 [17.2 s]	dev=(HR@5:0.0000,NDCG@5:0.0000) [16.2 s] *
+INFO:root:Epoch 7     loss=0.6931 [18.6 s]	dev=(HR@5:0.0000,NDCG@5:0.0000) [17.1 s] *
+INFO:root:Epoch 8     loss=0.6931 [18.9 s]	dev=(HR@5:0.0000,NDCG@5:0.0000) [16.8 s] *
+INFO:root:Epoch 9     loss=0.6931 [18.8 s]	dev=(HR@5:0.0000,NDCG@5:0.0000) [15.1 s] *
+INFO:root:Epoch 10    loss=0.6931 [17.3 s]	dev=(HR@5:0.0000,NDCG@5:0.0000) [15.0 s] *
+INFO:root:Epoch 11    loss=0.6931 [17.4 s]	dev=(HR@5:0.0000,NDCG@5:0.0000) [17.1 s] *
+INFO:root:Early stop at 11 based on dev result.
+INFO:root:
+Best Iter(dev)=    1	 dev=(HR@5:0.0000,NDCG@5:0.0000) [370.6 s] 
+INFO:root:Load model from ../model/BPRMF/BPRMF__Grocery_and_Gourmet_Food__0__lr=0.001__l2=1e-06__emb_size=64__batch_size=256.pt
+INFO:root:
+Dev  After Training: (HR@5:0.0000,NDCG@5:0.0000,HR@10:0.0000,NDCG@10:0.0000,HR@20:0.0000,NDCG@20:0.0000,HR@50:0.0000,NDCG@50:0.0000)
+INFO:root:
+Test After Training: (HR@5:0.0000,NDCG@5:0.0000,HR@10:0.0000,NDCG@10:0.0000,HR@20:0.0000,NDCG@20:0.0000,HR@50:0.0000,NDCG@50:0.0000)
+INFO:root:Saving top-100 recommendation results to: ../log/BPRMF\BPRMF__Grocery_and_Gourmet_Food__0__lr=0\rec-BPRMF-dev.csv
+INFO:root:dev Prediction results saved!
+INFO:root:Saving top-100 recommendation results to: ../log/BPRMF\BPRMF__Grocery_and_Gourmet_Food__0__lr=0\rec-BPRMF-test.csv
+INFO:root:test Prediction results saved!
+INFO:root:
+--------------------------------------------- END: 2024-12-12 23:18:18 ---------------------------------------------

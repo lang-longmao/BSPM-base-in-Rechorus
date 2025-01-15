@@ -1,0 +1,62 @@
+INFO:root:Namespace(model_name='BSPM', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-13 00:07:08 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ early_stop         | 10                  
+ epoch              | 200                 
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ l2                 | 0                   
+ lr                 | 0.001               
+ main_metric        |                     
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cuda
+INFO:root:Load corpus from data/Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:Namespace(model_name='BSPM', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-13 00:34:39 ---------------------------------------------
+INFO:root:
+============================================
+ Arguments           | Values               
+============================================
+ K_b                 | 1                   
+ K_idl               | 1                   
+ K_s                 | 1                   
+ T_b                 | 1.0                 
+ T_idl               | 1.0                 
+ T_s                 | 2.5                 
+ batch_size          | 256                 
+ data_appendix       |                     
+ dataset             | Grocery_and_Gourm...
+ early_stop          | 10                  
+ epoch               | 200                 
+ eval_batch_size     | 256                 
+ factor_dim          | 256                 
+ final_sharpening    | True                
+ gpu                 | 0                   
+ idl_beta            | 0.3                 
+ l2                  | 0                   
+ lr                  | 0.001               
+ main_metric         |                     
+ num_workers         | 5                   
+ optimizer           | Adam                
+ random_seed         | 0                   
+ save_final_results  | 1                   
+ sharpening_off      | True                
+ solver_blr          | euler               
+ solver_idl          | euler               
+ solver_shr          | rk4                 
+ t_point_combination | True                
+ topk                | 5,10,20,50          
+============================================
+INFO:root:Device: cuda
+INFO:root:Load corpus from data/Grocery_and_Gourmet_Food\BaseReader.pkl

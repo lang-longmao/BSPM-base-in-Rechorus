@@ -1,0 +1,89 @@
+INFO:root:Namespace(model_name='DIEN', model_mode='TopK')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-14 14:38:00 ---------------------------------------------
+INFO:root:
+==========================================
+ Arguments                  | Values      
+==========================================
+ add_historical_situations  | 0          
+ alpha_aux                  | 0.1        
+ aux_activations            | ReLU       
+ aux_hidden_layers          | [64]       
+ batch_size                 | 256        
+ data_appendix              | _context101
+ dataset                    | ML_1MTOPK  
+ dropout                    | 0.0        
+ early_stop                 | 10         
+ emb_size                   | 64         
+ epoch                      | 200        
+ eval_batch_size            | 32         
+ evolving_gru_type          | AIGRU      
+ fcn_activations            | ReLU       
+ fcn_hidden_layers          | [64]       
+ gpu                        | 0          
+ history_max                | 20         
+ include_item_features      | 1          
+ include_situation_features | 1          
+ include_user_features      | 0          
+ l2                         | 1e-06      
+ loss_n                     | BPR        
+ lr                         | 0.0005     
+ main_metric                |            
+ num_neg                    | 1          
+ num_workers                | 5          
+ optimizer                  | Adam       
+ random_seed                | 0          
+ save_final_results         | 1          
+ test_all                   | 0          
+ topk                       | 3,5,10,20  
+==========================================
+INFO:root:Device: cuda
+INFO:root:Reading data from "../data/", dataset = "ML_1MTOPK" 
+INFO:root:Namespace(model_name='DIEN', model_mode='TopK')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-14 14:38:44 ---------------------------------------------
+INFO:root:
+==========================================
+ Arguments                  | Values      
+==========================================
+ add_historical_situations  | 0          
+ alpha_aux                  | 0.1        
+ aux_activations            | ReLU       
+ aux_hidden_layers          | [64]       
+ batch_size                 | 256        
+ data_appendix              | _context101
+ dataset                    | ML_1MTOPK  
+ dropout                    | 0.0        
+ early_stop                 | 10         
+ emb_size                   | 64         
+ epoch                      | 200        
+ eval_batch_size            | 32         
+ evolving_gru_type          | AIGRU      
+ fcn_activations            | ReLU       
+ fcn_hidden_layers          | [64]       
+ gpu                        | 0          
+ history_max                | 20         
+ include_item_features      | 1          
+ include_situation_features | 1          
+ include_user_features      | 0          
+ l2                         | 1e-06      
+ loss_n                     | BPR        
+ lr                         | 0.0005     
+ main_metric                |            
+ num_neg                    | 1          
+ num_workers                | 5          
+ optimizer                  | Adam       
+ random_seed                | 0          
+ save_final_results         | 1          
+ test_all                   | 0          
+ topk                       | 3,5,10,20  
+==========================================
+INFO:root:Device: cuda
+INFO:root:Reading data from "data/", dataset = "ML_1MTOPK" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 6032, "# item": 3125, "# entry": 574197
+INFO:root:Collect context features...
+INFO:root:Loading context for train set...
+INFO:root:#Situation Feautures: 4
+INFO:root:Loading context for dev set...
+INFO:root:#Situation Feautures: 4
+INFO:root:Loading context for test set...
+INFO:root:#Situation Feautures: 4
